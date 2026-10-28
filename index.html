@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A lightweight, static showcase and index for the Prototype UI Kit.">
+    <title>Prototype UI Kit</title>
+    <link rel="stylesheet" href="tokens/tokens.css">
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        color: var(--color-text);
+        background: var(--color-canvas);
+        font: 400 1rem/1.6 var(--font-family);
+      }
+      .page { width: min(100% - 2rem, 960px); margin-inline: auto; }
+      header { padding: clamp(3rem, 9vw, 7rem) 0 2.5rem; }
+      .eyebrow { margin: 0 0 .75rem; color: var(--color-muted); font-size: .8rem; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; }
+      h1, h2, p { margin-top: 0; }
+      h1 { max-width: 14ch; margin-bottom: 1rem; font-size: clamp(2.5rem, 7vw, 4.5rem); line-height: 1.03; letter-spacing: -.045em; }
+      .intro { max-width: 62ch; color: var(--color-muted); font-size: 1.1rem; }
+      main { padding-bottom: 5rem; }
+      section { margin-top: 2rem; padding: clamp(1.25rem, 4vw, 2rem); border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); box-shadow: var(--shadow-soft); }
+      h2 { margin-bottom: .4rem; font-size: 1.25rem; letter-spacing: -.02em; }
+      .hint { margin-bottom: 1.25rem; color: var(--color-muted); }
+      .empty { padding: 1.25rem; border: 1px dashed var(--color-border-strong); border-radius: var(--radius-control); color: var(--color-muted); }
+      .empty p:last-child { margin-bottom: 0; }
+      a { color: var(--color-link); text-underline-offset: .2em; }
+      code { padding: .12em .35em; border-radius: 4px; background: var(--color-code); font-size: .9em; }
+      footer { padding: 0 0 2rem; color: var(--color-muted); font-size: .9rem; }
+    </style>
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <p class="eyebrow">Static UI library · HTML / CSS / SVG</p>
+        <h1>Prototype UI Kit</h1>
+        <p class="intro">A small, reusable starting point for interface prototypes. This showcase links to the available component examples.</p>
+      </header>
+      <main>
+        <section aria-labelledby="components-title">
+          <h2 id="components-title">Components</h2>
+          <p class="hint">Reusable pieces with standalone examples.</p>
+          <ul>
+            <li><a href="components/button/example.html">Button</a> — responsive variants, sizes, density, disabled, icon placement, and full width.</li>
+            <li><a href="components/checkbox/example.html">Checkbox</a> — native checkbox with label, description, and checked/disabled states.</li>
+            <li><a href="components/check/example.html">Check</a> — reusable checkbox indicator.</li>
+            <li><a href="components/icon/example.html">Icon</a> — inline SVG artwork with configurable size.</li>
+          </ul>
+        </section>
+        <section aria-labelledby="principles-title">
+          <h2 id="principles-title">Project principles</h2>
+          <p>Plain files, no build step, no runtime loader. Copy only the files a component needs, and make any shared token requirements explicit.</p>
+        </section>
+      </main>
+      <footer>Open this file directly in a browser. The showcase uses local resources and works from <code>file://</code>.</footer>
+    </div>
+  </body>
+</html>

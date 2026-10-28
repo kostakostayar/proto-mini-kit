@@ -1,0 +1,204 @@
+/* Values mapped from the Button and Core Desktop/Mobile Tokens Studio sets. */
+.button {
+  --_bg-normal: #da0916;
+  --_text-normal: #ffffff;
+  --_icon-normal: #ffffff;
+  --_border-normal: transparent;
+  --_bg-hover: #be0612;
+  --_text-hover: #ffffff;
+  --_icon-hover: #ffffff;
+  --_border-hover: transparent;
+  --_bg-active: #be0612;
+  --_text-active: #ffffff;
+  --_icon-active: #ffffff;
+  --_border-active: transparent;
+  --_bg-disabled: #f1f1f1;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: transparent;
+  --_height: 48px;
+  --_padding-y: 12px;
+  --_padding-x: 20px;
+  --_padding-x-icon: 12px;
+  --_radius: 16px;
+  --_icon-size: 24px;
+  --_gap: 8px;
+  --_font-size: 16px;
+  --_line-height: 24px;
+  --_border-width: 1px;
+  --_bg: var(--_bg-normal);
+  --_text: var(--_text-normal);
+  --_border: var(--_border-normal, transparent);
+  --_icon-color: var(--_icon-normal);
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--_gap);
+  block-size: var(--_height);
+  padding-block: var(--_padding-y);
+  padding-inline: var(--_padding-x);
+  border: var(--_border-width) solid var(--_border);
+  border-radius: var(--_radius);
+  background: var(--_bg);
+  color: var(--_text);
+  font-family: Inter, var(--font-family, sans-serif);
+  font-size: var(--_font-size);
+  font-weight: 500;
+  line-height: var(--_line-height);
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  vertical-align: middle;
+}
+
+/* Mobile values apply at viewport widths up to 1024px. */
+.button[data-size="lg"][data-density="normal"] { --_height: 60px; --_padding-y: 16px; --_padding-x: 24px; --_padding-x-icon: 16px; --_radius: 20px; --_icon-size: 28px; --_gap: 8px; --_font-size: 19px; --_line-height: 32px; }
+.button[data-size="lg"][data-density="tight"] { --_height: 52px; --_padding-y: 12px; --_padding-x: 20px; --_padding-x-icon: 12px; --_radius: 16px; --_icon-size: 28px; --_gap: 8px; --_font-size: 19px; --_line-height: 32px; }
+.button[data-size="md"][data-density="normal"] { --_height: 48px; --_padding-y: 12px; --_padding-x: 20px; --_padding-x-icon: 12px; --_radius: 16px; --_icon-size: 24px; --_gap: 8px; --_font-size: 16px; --_line-height: 24px; }
+.button[data-size="md"][data-density="tight"] { --_height: 40px; --_padding-y: 8px; --_padding-x: 16px; --_padding-x-icon: 8px; --_radius: 12px; --_icon-size: 24px; --_gap: 8px; --_font-size: 16px; --_line-height: 24px; }
+.button[data-size="sm"][data-density="normal"] { --_height: 36px; --_padding-y: 8px; --_padding-x: 16px; --_padding-x-icon: 8px; --_radius: 12px; --_icon-size: 20px; --_gap: 8px; --_font-size: 14px; --_line-height: 20px; }
+.button[data-size="sm"][data-density="tight"] { --_height: 28px; --_padding-y: 4px; --_padding-x: 12px; --_padding-x-icon: 4px; --_radius: 8px; --_icon-size: 20px; --_gap: 8px; --_font-size: 14px; --_line-height: 20px; }
+.button[data-size="xs"][data-density="normal"] { --_height: 36px; --_padding-y: 8px; --_padding-x: 16px; --_padding-x-icon: 8px; --_radius: 12px; --_icon-size: 20px; --_gap: 4px; --_font-size: 14px; --_line-height: 20px; }
+.button[data-size="xs"][data-density="tight"] { --_height: 28px; --_padding-y: 4px; --_padding-x: 8px; --_padding-x-icon: 4px; --_radius: 8px; --_icon-size: 20px; --_gap: 4px; --_font-size: 14px; --_line-height: 20px; }
+
+@media (min-width: 1025px) {
+  /* Desktop values apply above 1024px. */
+  .button {
+    --_height: 56px;
+    --_padding-y: 16px;
+    --_padding-x: 24px;
+    --_padding-x-icon: 16px;
+    --_radius: 20px;
+    --_icon-size: 24px;
+    --_gap: 8px;
+    --_font-size: 16px;
+    --_line-height: 24px;
+  }
+  .button[data-size="lg"][data-density="normal"] { --_height: 68px; --_padding-y: 20px; --_padding-x: 28px; --_padding-x-icon: 20px; --_radius: 24px; --_icon-size: 28px; --_gap: 8px; --_font-size: 19px; --_line-height: 32px; }
+  .button[data-size="lg"][data-density="tight"] { --_height: 60px; --_padding-y: 16px; --_padding-x: 24px; --_padding-x-icon: 16px; --_radius: 20px; --_icon-size: 28px; --_gap: 8px; --_font-size: 19px; --_line-height: 32px; }
+  .button[data-size="md"][data-density="normal"] { --_height: 56px; --_padding-y: 16px; --_padding-x: 24px; --_padding-x-icon: 16px; --_radius: 20px; --_icon-size: 24px; --_gap: 8px; --_font-size: 16px; --_line-height: 24px; }
+  .button[data-size="md"][data-density="tight"] { --_height: 48px; --_padding-y: 12px; --_padding-x: 20px; --_padding-x-icon: 12px; --_radius: 16px; --_icon-size: 24px; --_gap: 8px; --_font-size: 16px; --_line-height: 24px; }
+  .button[data-size="sm"][data-density="normal"] { --_height: 44px; --_padding-y: 12px; --_padding-x: 20px; --_padding-x-icon: 12px; --_radius: 16px; --_icon-size: 20px; --_gap: 8px; --_font-size: 14px; --_line-height: 20px; }
+  .button[data-size="sm"][data-density="tight"] { --_height: 36px; --_padding-y: 8px; --_padding-x: 16px; --_padding-x-icon: 8px; --_radius: 12px; --_icon-size: 20px; --_gap: 8px; --_font-size: 14px; --_line-height: 20px; }
+  .button[data-size="xs"][data-density="normal"] { --_height: 36px; --_padding-y: 8px; --_padding-x: 16px; --_padding-x-icon: 8px; --_radius: 12px; --_icon-size: 20px; --_gap: 4px; --_font-size: 14px; --_line-height: 20px; }
+  .button[data-size="xs"][data-density="tight"] { --_height: 28px; --_padding-y: 4px; --_padding-x: 8px; --_padding-x-icon: 4px; --_radius: 8px; --_icon-size: 20px; --_gap: 4px; --_font-size: 14px; --_line-height: 20px; }
+}
+
+.button[data-variant="primary"] {
+  --_bg-normal: #da0916;
+  --_text-normal: #ffffff;
+  --_icon-normal: #ffffff;
+  --_border-normal: transparent;
+  --_bg-hover: #be0612;
+  --_text-hover: #ffffff;
+  --_icon-hover: #ffffff;
+  --_border-hover: transparent;
+  --_bg-active: #be0612;
+  --_text-active: #ffffff;
+  --_icon-active: #ffffff;
+  --_border-active: transparent;
+  --_bg-disabled: #f1f1f1;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: transparent;
+}
+.button[data-variant="secondary"] {
+  --_bg-normal: #00000000;
+  --_text-normal: #181818;
+  --_icon-normal: #181818;
+  --_border-normal: #181818;
+  --_bg-hover: #e6e6e6;
+  --_text-hover: #181818;
+  --_icon-hover: #181818;
+  --_border-hover: #181818;
+  --_bg-active: #e6e6e6;
+  --_text-active: #181818;
+  --_icon-active: #181818;
+  --_border-active: #181818;
+  --_bg-disabled: #00000000;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: #c0c0c0;
+}
+.button[data-variant="ghost"] {
+  --_bg-normal: #00000000;
+  --_text-normal: #181818;
+  --_icon-normal: #181818;
+  --_border-normal: transparent;
+  --_bg-hover: #e6e6e6;
+  --_text-hover: #181818;
+  --_icon-hover: #181818;
+  --_border-hover: transparent;
+  --_bg-active: #e6e6e6;
+  --_text-active: #181818;
+  --_icon-active: #181818;
+  --_border-active: transparent;
+  --_bg-disabled: #00000000;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: transparent;
+}
+.button[data-variant="grey"] {
+  --_bg-normal: #f1f1f1;
+  --_text-normal: #181818;
+  --_icon-normal: #181818;
+  --_border-normal: transparent;
+  --_bg-hover: #e6e6e6;
+  --_text-hover: #181818;
+  --_icon-hover: #181818;
+  --_border-hover: transparent;
+  --_bg-active: #e6e6e6;
+  --_text-active: #181818;
+  --_icon-active: #181818;
+  --_border-active: transparent;
+  --_bg-disabled: #f1f1f1;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: transparent;
+}
+.button[data-variant="accent-dark"] {
+  --_bg-normal: #181818;
+  --_text-normal: #ffffff;
+  --_icon-normal: #ffffff;
+  --_border-normal: transparent;
+  --_bg-hover: #484848;
+  --_text-hover: #ffffff;
+  --_icon-hover: #ffffff;
+  --_border-hover: transparent;
+  --_bg-active: #484848;
+  --_text-active: #ffffff;
+  --_icon-active: #ffffff;
+  --_border-active: transparent;
+  --_bg-disabled: #f1f1f1;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: transparent;
+}
+.button[data-variant="accent-light"] {
+  --_bg-normal: #ffffff;
+  --_text-normal: #181818;
+  --_icon-normal: #181818;
+  --_border-normal: transparent;
+  --_bg-hover: #e6e6e6;
+  --_text-hover: #181818;
+  --_icon-hover: #181818;
+  --_border-hover: transparent;
+  --_bg-active: #e6e6e6;
+  --_text-active: #181818;
+  --_icon-active: #181818;
+  --_border-active: transparent;
+  --_bg-disabled: #f1f1f1;
+  --_text-disabled: #c0c0c0;
+  --_icon-disabled: #c0c0c0;
+  --_border-disabled: transparent;
+}
+
+.button:hover:not(:disabled) { --_bg: var(--_bg-hover); --_text: var(--_text-hover); --_border: var(--_border-hover, transparent); --_icon-color: var(--_icon-hover); }
+.button:active:not(:disabled) { --_bg: var(--_bg-active); --_text: var(--_text-active); --_border: var(--_border-active, transparent); --_icon-color: var(--_icon-active); }
+.button:disabled { --_bg: var(--_bg-disabled); --_text: var(--_text-disabled); --_border: var(--_border-disabled, transparent); --_icon-color: var(--_icon-disabled); cursor: not-allowed; }
+.button--with-icon { padding-inline: var(--_padding-x-icon); }
+.button--full-width { display: flex; inline-size: 100%; }
+.button__icon { display: inline-flex; flex: none; color: var(--_icon-color); line-height: 0; }
+.button__icon > .icon { --icon-size: var(--_icon-size); }
+.button__icon > svg { display: block; inline-size: var(--_icon-size); block-size: auto; max-inline-size: 100%; }

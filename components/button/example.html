@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Button component · Prototype UI Kit</title>
+    <link rel="stylesheet" href="../../tokens/tokens.css">
+    <link rel="stylesheet" href="../icon/icon.css">
+    <link rel="stylesheet" href="button.css">
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 2rem 1rem; color: var(--color-text); background: var(--color-canvas); font: 400 1rem/1.5 var(--font-family); }
+      main { width: min(100%, 960px); margin-inline: auto; }
+      h1 { margin-top: 0; }
+      section { margin-top: 2rem; }
+      .demo-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 1fr)); gap: 1rem; }
+      .demo-card, .demo-panel { padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
+      .demo-card h3 { margin: 0 0 .75rem; font-size: 1rem; }
+      .demo-card .button + .button { margin-inline-start: .35rem; }
+      .demo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1rem; }
+      .demo-row + .demo-row { margin-top: 1rem; }
+      .demo-row-label { flex: 0 0 4rem; color: var(--color-muted); }
+      .demo-panel > .button--full-width + .button--full-width { margin-top: .75rem; }
+      code { padding: .1em .3em; border-radius: 4px; background: var(--color-code); }
+      .button:focus-visible { outline: auto; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Button</h1>
+      <p>Resize the viewport to see Mobile tokens at 1024px and below, and Desktop tokens above 1024px.</p>
+      <section aria-labelledby="variants-title">
+        <h2 id="variants-title">Variants and disabled state</h2>
+        <div class="demo-grid">
+        <article class="demo-card">
+          <h3>Primary</h3>
+          <button class="button" type="button" data-variant="primary" data-size="md" data-density="normal">Primary</button>
+          <button class="button" type="button" data-variant="primary" data-size="md" data-density="normal" disabled>Primary disabled</button>
+        </article>
+        <article class="demo-card">
+          <h3>Secondary</h3>
+          <button class="button" type="button" data-variant="secondary" data-size="md" data-density="normal">Secondary</button>
+          <button class="button" type="button" data-variant="secondary" data-size="md" data-density="normal" disabled>Secondary disabled</button>
+        </article>
+        <article class="demo-card">
+          <h3>Ghost</h3>
+          <button class="button" type="button" data-variant="ghost" data-size="md" data-density="normal">Ghost</button>
+          <button class="button" type="button" data-variant="ghost" data-size="md" data-density="normal" disabled>Ghost disabled</button>
+        </article>
+        <article class="demo-card">
+          <h3>Grey</h3>
+          <button class="button" type="button" data-variant="grey" data-size="md" data-density="normal">Grey</button>
+          <button class="button" type="button" data-variant="grey" data-size="md" data-density="normal" disabled>Grey disabled</button>
+        </article>
+        <article class="demo-card">
+          <h3>Accent dark</h3>
+          <button class="button" type="button" data-variant="accent-dark" data-size="md" data-density="normal">Accent dark</button>
+          <button class="button" type="button" data-variant="accent-dark" data-size="md" data-density="normal" disabled>Accent dark disabled</button>
+        </article>
+        <article class="demo-card">
+          <h3>Accent light</h3>
+          <button class="button" type="button" data-variant="accent-light" data-size="md" data-density="normal">Accent light</button>
+          <button class="button" type="button" data-variant="accent-light" data-size="md" data-density="normal" disabled>Accent light disabled</button>
+        </article>
+        </div>
+      </section>
+      <section aria-labelledby="sizes-title">
+        <h2 id="sizes-title">Sizes and density</h2>
+        <div class="demo-panel">
+          <div class="demo-row"><span class="demo-row-label">Normal</span>
+            <button class="button" type="button" data-variant="primary" data-size="lg" data-density="normal">Large</button>
+            <button class="button" type="button" data-variant="primary" data-size="md" data-density="normal">Medium</button>
+            <button class="button" type="button" data-variant="primary" data-size="sm" data-density="normal">Small</button>
+            <button class="button" type="button" data-variant="primary" data-size="xs" data-density="normal">Extra small</button>
+          </div>
+          <div class="demo-row"><span class="demo-row-label">Tight</span>
+            <button class="button" type="button" data-variant="secondary" data-size="lg" data-density="tight">Large</button>
+            <button class="button" type="button" data-variant="secondary" data-size="md" data-density="tight">Medium</button>
+            <button class="button" type="button" data-variant="secondary" data-size="sm" data-density="tight">Small</button>
+            <button class="button" type="button" data-variant="secondary" data-size="xs" data-density="tight">Extra small</button>
+          </div>
+        </div>
+      </section>
+      <section aria-labelledby="icons-title">
+        <h2 id="icons-title">Icon placement</h2>
+        <div class="demo-panel demo-row">
+          <button class="button button--with-icon" type="button" data-variant="secondary" data-size="md" data-density="normal">
+            <span class="button__icon" aria-hidden="true"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 3.75C3 3.33579 3.33579 3 3.75 3H5.474C5.82701 3 6.13224 3.24618 6.20699 3.59118L6.7289 6H18.75C19.8892 6 20.7239 7.06984 20.4476 8.1749L19.0996 13.5669C18.8179 14.6925 17.8609 15.5207 16.7057 15.6363L9.88967 16.3183C8.49373 16.457 7.21567 15.5242 6.92528 14.1514L5.39101 6.90882L4.8691 4.5H3.75C3.33579 4.5 3 4.16421 3 3.75ZM7.04952 7.5L8.39272 13.8406C8.52442 14.4635 9.10456 14.8887 9.74033 14.8257L16.5563 14.1437C17.081 14.0913 17.5161 13.7154 17.6444 13.2031L18.9924 7.8111C19.0321 7.65216 18.9128 7.5 18.75 7.5H7.04952ZM7.83299 19.383C7.83086 18.763 8.33467 18.267 8.947 18.267C9.56421 18.267 10.064 18.7668 10.064 19.384C10.064 20.0002 9.56421 20.5 8.948 20.5C8.33699 20.5 7.83089 20.0053 7.83299 19.383ZM16.245 19.3867C16.2409 18.765 16.7455 18.267 17.359 18.267C17.9756 18.267 18.474 18.7654 18.477 19.3793L18.477 19.383C18.477 19.9992 17.9772 20.499 17.361 20.499C16.746 20.499 16.247 20.0012 16.245 19.3867Z" fill-rule="evenodd" clip-rule="evenodd" fill="#181818"/>
+</svg></span></span>
+            <span>Add to cart</span>
+          </button>
+          <button class="button button--with-icon" type="button" data-variant="ghost" data-size="md" data-density="normal">
+            <span>Continue</span>
+            <span class="button__icon" aria-hidden="true"><span class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M9.46967 7.46967C9.76256 7.17678 10.2374 7.17678 10.5303 7.46967L14.5303 11.4697C14.8232 11.7626 14.8232 12.2374 14.5303 12.5303L10.5303 16.5303C10.2374 16.8232 9.76256 16.8232 9.46967 16.5303C9.17678 16.2374 9.17678 15.7626 9.46967 15.4697L12.9393 12L9.46967 8.53033C9.17678 8.23744 9.17678 7.76256 9.46967 7.46967Z" fill-rule="evenodd" clip-rule="evenodd" fill="#181818"/>
+</svg></span></span>
+          </button>
+        </div>
+        <p>Icons use the existing Icon component styles. Artwork colors are preserved; only currentColor-based SVG artwork inherits the button icon color.</p>
+      </section>
+      <section aria-labelledby="width-title">
+        <h2 id="width-title">Full width</h2>
+        <div class="demo-panel">
+          <button class="button button--full-width" type="button" data-variant="primary" data-size="md" data-density="normal">Continue</button>
+          <button class="button button--full-width" type="button" data-variant="secondary" data-size="md" data-density="normal">Cancel</button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

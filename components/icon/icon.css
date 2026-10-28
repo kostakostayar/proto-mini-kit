@@ -1,0 +1,16 @@
+/* Inline SVG icon sizing. Set --icon-size to any CSS pixel value per instance. */
+.icon {
+  display: inline-flex;
+  flex: none;
+  inline-size: var(--icon-size, 24px);
+  max-inline-size: 100%;
+  vertical-align: middle;
+}
+
+.icon > svg {
+  display: block;
+  inline-size: 100%;
+  block-size: auto;
+  max-inline-size: 100%;
+  overflow: visible;
+}

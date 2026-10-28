@@ -1,0 +1,8 @@
+{
+  "tokenSetOrder": [
+    "сomponents/mobile",
+    "сomponents/desktop",
+    "core/mobile",
+    "core/desktop"
+  ]
+}

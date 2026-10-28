@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Checkbox component · Prototype UI Kit</title>
+    <link rel="stylesheet" href="../../tokens/tokens.css">
+    <link rel="stylesheet" href="../check/check.css">
+    <link rel="stylesheet" href="checkbox.css">
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 2rem 1rem; color: var(--color-text); background: var(--color-canvas); font: 400 1rem/1.5 var(--font-family); }
+      main { width: min(100%, 760px); margin-inline: auto; }
+      h1 { margin-top: 0; }
+      .demo-list { display: grid; gap: 1rem; }
+      .demo-card { padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
+      .demo-card h2 { margin: 0 0 .75rem; font-size: 1rem; }
+      .demo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Checkbox</h1>
+      <p>Native checkbox behavior with the exported visual states. Hover over a row; use Tab and Space to test keyboard interaction.</p>
+      <div class="demo-list">
+        <section class="demo-card" aria-labelledby="labelled-title">
+          <h2 id="labelled-title">Label and description</h2>
+          <div class="demo-row">
+            <label class="checkbox"><input class="check-control__input" type="checkbox" aria-labelledby="checkbox-label-4" aria-describedby="checkbox-description-4" aria-labelledby="checkbox-label-3" aria-describedby="checkbox-description-3" aria-labelledby="checkbox-label-2" aria-describedby="checkbox-description-2" aria-labelledby="checkbox-label-1" aria-describedby="checkbox-description-1"><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span><span class="checkbox__content"><span class="checkbox__label" id="checkbox-label-1">Label</span><span class="checkbox__description" id="checkbox-description-1">Description</span></span></label>
+            <label class="checkbox"><input class="check-control__input" type="checkbox" checked><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span><span class="checkbox__content"><span class="checkbox__label" id="checkbox-label-2">Checked</span><span class="checkbox__description" id="checkbox-description-2">Description</span></span></label>
+          </div>
+        </section>
+        <section class="demo-card" aria-labelledby="disabled-title">
+          <h2 id="disabled-title">Disabled</h2>
+          <div class="demo-row">
+            <label class="checkbox"><input class="check-control__input" type="checkbox" disabled><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span><span class="checkbox__content"><span class="checkbox__label" id="checkbox-label-3">Disabled</span><span class="checkbox__description" id="checkbox-description-3">Description</span></span></label>
+            <label class="checkbox"><input class="check-control__input" type="checkbox" checked disabled><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span><span class="checkbox__content"><span class="checkbox__label" id="checkbox-label-4">Disabled checked</span><span class="checkbox__description" id="checkbox-description-4">Description</span></span></label>
+          </div>
+        </section>
+        <section class="demo-card" aria-labelledby="without-label-title">
+          <h2 id="without-label-title">Without visible label</h2>
+          <label class="checkbox checkbox--without-label"><input class="check-control__input" type="checkbox" aria-label="Enable notifications"><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span></label>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

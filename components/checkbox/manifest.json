@@ -1,0 +1,49 @@
+{
+  "name": "Checkbox",
+  "purpose": "Accessible checkbox control with optional visible label and description.",
+  "api": {
+    "element": "Use a native input[type=checkbox] inside a label element.",
+    "checked": "Use the native checked attribute/property.",
+    "disabled": "Use the native disabled attribute.",
+    "label": "Include .checkbox__content with .checkbox__label and optional .checkbox__description; omit the content group when no visible text is required.",
+    "accessibleName": "When visible label text is omitted, set aria-label on the input."
+  },
+  "usage": "Include ../check/check.css and checkbox.css. See example.html for label-present and label-omitted markup.",
+  "dependencies": {
+    "runtime": [],
+    "stylesheets": [
+      "../check/check.css",
+      "checkbox.css"
+    ],
+    "sharedTokens": [],
+    "tokenSource": [
+      "tokens/source/сomponents/desktop.json",
+      "tokens/source/сomponents/mobile.json",
+      "tokens/source/core/desktop.json",
+      "tokens/source/core/mobile.json"
+    ]
+  },
+  "variants": {
+    "state": [
+      "normal",
+      "hover",
+      "disabled"
+    ],
+    "checked": [
+      false,
+      true
+    ],
+    "label": [
+      false,
+      true
+    ]
+  },
+  "accessibility": [
+    "The native checkbox supports keyboard interaction and form submission.",
+    "A visible label is associated by wrapping the input; use aria-label when it is omitted.",
+    "The browser focus indicator is retained on the visible checkbox box.",
+    "The decorative mark is hidden from assistive technology.",
+    "Use aria-labelledby for the visible label and aria-describedby for its description when both are present."
+  ],
+  "responsive": "Desktop and Mobile component token values are identical; no breakpoint override is needed."
+}

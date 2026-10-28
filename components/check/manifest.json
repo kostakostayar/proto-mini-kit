@@ -1,0 +1,25 @@
+{
+  "name": "Check",
+  "purpose": "A compact visual checkbox indicator controlled by a native checkbox input.",
+  "api": {
+    "element": "Use a label containing an input[type=checkbox] followed by .check-control__box.",
+    "checked": "Use the native checked attribute/property.",
+    "disabled": "Use the native disabled attribute.",
+    "accessibleName": "Set aria-label on the input when the control has no visible associated text."
+  },
+  "usage": "Include check.css. See example.html for complete markup.",
+  "dependencies": {
+    "runtime": [],
+    "stylesheets": ["check.css"],
+    "sharedTokens": [],
+    "tokenSource": ["tokens/source/сomponents/desktop.json", "tokens/source/сomponents/mobile.json", "tokens/source/core/desktop.json", "tokens/source/core/mobile.json"]
+  },
+  "states": ["normal", "hover", "disabled"],
+  "accessibility": [
+    "The native checkbox remains focusable and supports keyboard toggling.",
+    "The browser focus indicator is retained on the visible checkbox box.",
+    "Provide an accessible name through associated visible text or aria-label."
+  ],
+  "artwork": "Uses the existing ic-success-tick.svg path geometry inline; only the copied path fill is currentColor to match the exported white mark token. The source asset is unchanged.",
+  "responsive": "Desktop and Mobile checkbox tokens are identical; no breakpoint override is needed."
+}

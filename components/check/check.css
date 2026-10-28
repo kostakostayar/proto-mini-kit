@@ -1,0 +1,73 @@
+/* Values are mapped from the checkbox and Core Desktop/Mobile Tokens Studio sets. */
+.check-control {
+  position: relative;
+  display: inline-flex;
+  flex: none;
+  inline-size: 20px;
+  block-size: 20px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+
+.check-control__input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  inline-size: 100%;
+  block-size: 100%;
+  margin: 0;
+  opacity: 0;
+  cursor: inherit;
+}
+
+.check-control__box {
+  display: grid;
+  place-items: center;
+  box-sizing: border-box;
+  inline-size: 20px;
+  block-size: 20px;
+  border: 1px solid #c0c0c0;
+  border-radius: 5px;
+  background: #ffffff;
+  color: #ffffff;
+}
+
+.check-control__box svg {
+  display: block;
+  inline-size: 20px;
+  block-size: 20px;
+  opacity: 0;
+}
+
+.check-control__input:hover:not(:disabled):not(:checked) + .check-control__box {
+  border-color: #757575;
+}
+
+.check-control__input:checked + .check-control__box {
+  border-color: #da0916;
+  background: #da0916;
+}
+
+.check-control__input:checked + .check-control__box svg {
+  opacity: 1;
+}
+
+.check-control__input:checked:hover:not(:disabled) + .check-control__box {
+  border-color: #be0612;
+  background: #be0612;
+}
+
+.check-control__input:disabled + .check-control__box {
+  border-color: #e6e6e6;
+  background: #e6e6e6;
+  cursor: not-allowed;
+}
+
+.check-control__input:checked:disabled + .check-control__box {
+  border-color: #f4b5b9;
+  background: #f4b5b9;
+}
+
+.check-control__input:focus-visible + .check-control__box {
+  outline: auto;
+}

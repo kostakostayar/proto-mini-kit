@@ -1,0 +1,23 @@
+{
+  "name": "Icon",
+  "purpose": "Display existing SVG artwork inline at a chosen pixel width while preserving its intrinsic aspect ratio and colors.",
+  "api": {
+    "markup": "Wrap the inline SVG in an element with class=\"icon\".",
+    "size": "Set --icon-size to any CSS length in pixels on the .icon wrapper. Defaults to 24px.",
+    "iconSelection": "Choose an SVG from assets/icons and paste its SVG markup directly into the wrapper. No runtime file loading is used."
+  },
+  "usage": "Include icon.css and inline the unchanged contents of the selected SVG inside <span class=\"icon\" style=\"--icon-size: 20px\" aria-hidden=\"true\">…</span>.",
+  "dependencies": {
+    "runtime": [],
+    "stylesheets": ["icon.css"],
+    "sharedTokens": []
+  },
+  "accessibility": [
+    "Mark decorative SVGs and their wrapper aria-hidden=\"true\".",
+    "For a meaningful icon inside a named button or link, hide the SVG from assistive technology and provide the accessible name on the button or link.",
+    "If an SVG conveys standalone information, give the SVG role=\"img\" and an accessible name with aria-label or a title element.",
+    "Do not use an icon by itself as an unnamed control."
+  ],
+  "color": "The component does not set fill, stroke, or color. Existing artwork retains its source colors; currentColor is not added automatically.",
+  "fileProtocol": "Works in static HTML opened with file:// because SVG markup is inline and no fetch or server is required."
+}

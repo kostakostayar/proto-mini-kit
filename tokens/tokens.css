@@ -1,0 +1,21 @@
+:root {
+  color-scheme: light;
+
+  /* Base palette */
+  --color-canvas: #f5f6f8;
+  --color-surface: #ffffff;
+  --color-text: #20232a;
+  --color-muted: #626b78;
+  --color-border: #e1e5eb;
+  --color-border-strong: #c8ced8;
+  --color-link: #2457a7;
+  --color-code: #eef1f5;
+
+  /* Typography */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  /* Shape and depth */
+  --radius-control: 8px;
+  --radius-card: 16px;
+  --shadow-soft: 0 8px 28px rgb(27 39 56 / 5%);
+}

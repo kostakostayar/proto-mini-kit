@@ -1,0 +1,36 @@
+{
+  "name": "Button",
+  "purpose": "Reusable single-line action button styled from the Desktop and Mobile Button tokens.",
+  "api": {
+    "element": "Use a native <button type=\"button\"> for actions; use type=\"submit\" when submitting a form.",
+    "variant": ["primary", "secondary", "ghost", "grey", "accent-dark", "accent-light"],
+    "size": ["lg", "md", "sm", "xs"],
+    "density": ["normal", "tight"],
+    "disabled": "Use the native disabled attribute.",
+    "label": "Use visible text content for the button name.",
+    "icon": "Place an existing .icon element inside .button__icon before or after the label, and add .button--with-icon to use the icon-specific horizontal padding token.",
+    "fullWidth": "Add .button--full-width when the action should span its container."
+  },
+  "usage": "Include button.css. Set data-variant, data-size, and data-density on the native button. See example.html for markup.",
+  "dependencies": {
+    "runtime": [],
+    "stylesheets": ["button.css", "../icon/icon.css (optional, for icons)"],
+    "sharedTokens": ["tokens/source/сomponents/desktop.json", "tokens/source/сomponents/mobile.json", "tokens/source/core/desktop.json", "tokens/source/core/mobile.json"],
+    "tokenCss": "tokens/tokens.css is not required; it does not currently contain Button tokens. The component maps resolved Button values locally."
+  },
+  "responsive": {
+    "mobile": "Viewport width <= 1024px",
+    "desktop": "Viewport width > 1024px",
+    "desktopMediaQuery": "@media (min-width: 1025px)"
+  },
+  "states": ["normal", "hover", "active", "disabled"],
+  "loading": "Not implemented; the token export defines no loading state or spinner.",
+  "accessibility": [
+    "Use a native button and visible text to provide its accessible name.",
+    "The native disabled attribute prevents activation and applies exported disabled colors.",
+    "The component does not remove the browser keyboard focus indicator.",
+    "Mark decorative icons aria-hidden=\"true\". Icon-only buttons are not included in this API."
+  ],
+  "scope": "This component implements the single-line button token family. The separate button-2rows token family is outside this component API.",
+  "colorNote": "Button icon-color tokens are exposed through CSS color on .button__icon; existing SVGs with fixed fill or stroke colors retain those colors, consistent with the Icon component."
+}

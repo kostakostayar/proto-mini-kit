@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Check component · Prototype UI Kit</title>
+    <link rel="stylesheet" href="../../tokens/tokens.css">
+    <link rel="stylesheet" href="check.css">
+    <style>
+      * { box-sizing: border-box; }
+      body { margin: 0; padding: 2rem 1rem; color: var(--color-text); background: var(--color-canvas); font: 400 1rem/1.5 var(--font-family); }
+      main { width: min(100%, 760px); margin-inline: auto; }
+      h1 { margin-top: 0; }
+      .state-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 1rem; }
+      .state-card { display: flex; min-height: 88px; align-items: center; justify-content: space-between; gap: 1rem; padding: 1rem; border: 1px solid var(--color-border); border-radius: var(--radius-card); background: var(--color-surface); }
+      .state-card h2 { margin: 0; font-size: 1rem; }
+      .state-card input { cursor: pointer; }
+      .state-card input:disabled { cursor: not-allowed; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>Check</h1>
+      <p>Reusable checkbox indicator. The native input provides keyboard and checked/disabled behavior.</p>
+      <div class="state-grid">
+        <article class="state-card"><h2>Normal · unchecked</h2><label class="check-control"><input class="check-control__input" type="checkbox" aria-label="Normal unchecked example"><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span></label></article>
+        <article class="state-card"><h2>Normal · checked</h2><label class="check-control"><input class="check-control__input" type="checkbox" checked aria-label="Normal checked example"><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span></label></article>
+        <article class="state-card"><h2>Disabled · unchecked</h2><label class="check-control"><input class="check-control__input" type="checkbox" disabled aria-label="Disabled unchecked example"><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span></label></article>
+        <article class="state-card"><h2>Disabled · checked</h2><label class="check-control"><input class="check-control__input" type="checkbox" checked disabled aria-label="Disabled checked example"><span class="check-control__box" aria-hidden="true"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M6.55852 12.2908C6.25413 11.9824 6.25696 11.4858 6.56483 11.1809C6.87355 10.8751 7.37185 10.8781 7.67691 11.1875L9.82508 13.3662C10.2134 13.7601 10.8478 13.7639 11.2408 13.3746L16.6697 7.99813C16.978 7.69278 17.4755 7.69519 17.7808 8.00351C18.0862 8.31184 18.0838 8.80932 17.7755 9.11467L11.9414 14.8925C11.1556 15.6707 9.88751 15.6635 9.11065 14.8764L6.55852 12.2908Z" fill="currentColor"/>
+</svg></span></label></article>
+      </div>
+    </main>
+  </body>
+</html>
